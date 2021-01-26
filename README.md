@@ -46,5 +46,3 @@ This project will serve as a way to prepare for the Android Certification.
 - [ ] Be able to use the System Log to output debug information
 - [ ] Understand how to use breakpoints in Android Studio
 - [ ] Know how to inspect variables using Android Studio
-
-## Testing
