@@ -34,6 +34,12 @@ This project will serve as a way to prepare for the Android Certification.
 - [ ] Be able to create persistent Preference data from user input
 - [ ] Understand how to change the behavior of the app based on user preferences
 
+## Testing
+- [ ] Thoroughly understand fundamentals of testing
+- [ ] Be able to write useful local JUnit tests
+- [ ] Understand the Espresso UI test framework
+- [ ] Know how to write useful automated Android tests
+
 ## Debugging
 - [ ] Understand the basic debugging techniques available in Android Studio
 - [ ] Know how to debug and fix issues with an app's functional behavior and usability
