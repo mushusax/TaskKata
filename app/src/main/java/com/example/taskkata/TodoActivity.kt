@@ -4,6 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
@@ -14,8 +17,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.NavController
 import androidx.navigation.ui.*
+import com.bumptech.glide.Glide
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import org.w3c.dom.Text
 
 class TodoActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -48,10 +54,22 @@ class TodoActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         navView.setupWithNavController(navController)
         navView.setNavigationItemSelectedListener(this)
 
-        auth = FirebaseAuth.getInstance()
 
-        //Signout button
+        //Update profile in header
+        val user: FirebaseUser? = FirebaseAuth.getInstance().currentUser
+        user?.let {
+            val header = navView.getHeaderView(0)
 
+            //Update username
+            val username = it.displayName
+            val textUserName: TextView = header.findViewById(R.id.user_name)
+            textUserName.text = username
+
+            //Update profile image
+            val imgProfile: ImageView = header.findViewById(R.id.profile_picture)
+            val userImage = it.photoUrl
+            Glide.with(this).load(userImage).circleCrop().into(imgProfile)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
