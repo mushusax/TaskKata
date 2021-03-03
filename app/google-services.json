@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "982694022757",
+    "project_id": "task-kata",
+    "storage_bucket": "task-kata.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:982694022757:android:c57685135be8f09109008c",
+        "android_client_info": {
+          "package_name": "com.example.taskkata"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "982694022757-9c1b2kkflmc8j6qgcd58qm5a2capjmp5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.taskkata",
+            "certificate_hash": "af7e92c3f62baf535fcdeb72ce7963f7659df9af"
+          }
+        },
+        {
+          "client_id": "982694022757-5h8ulgl1gejimf6c0n88rnf0o568thta.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiHDYOleJIXjR4hryhQuAR6jcy0132fsY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "982694022757-5h8ulgl1gejimf6c0n88rnf0o568thta.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
