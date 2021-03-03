@@ -4,26 +4,26 @@ This project will serve as a way to prepare for the Android Certification.
 
 # Android Certification Study Guide
 ## Android Core
-- [ ] Understand the architecture of the Android system
-- [ ] Be able to describe the basic building blocks of an Android app
-- [ ] Know how to build and run an android app
-- [ ] Display simple messages in a popup using a Toast or a Snackbar
+- [X] Understand the architecture of the Android system
+- [X] Be able to describe the basic building blocks of an Android app
+- [X] Know how to build and run an android app
+- [X] Display simple messages in a popup using a Toast or a Snackbar
 - [ ] Be able to display a message outside your app's UI using Notifications
 - [ ] Understand how to localize an app
 - [ ] Be able to schedule a background task using WorkManager
 
 ## User Interface
-- [ ] Understand the Android activity lifecycle
-- [ ] Be able to create an Activity that displays a layout
-- [ ] Be able to construct a UI with ConstraintLayout
+- [X] Understand the Android activity lifecycle
+- [X] Be able to create an Activity that displays a layout
+- [X] Be able to construct a UI with ConstraintLayout
 - [ ] Understand how to create a custom View class and add it to a Layout
 - [ ] Know how to implement a custom app theme
 - [ ] Be able to add accessibility hooks to a custom View
-- [ ] Know how to aply content descriptions to views for accessibility
+- [X] Know how to aply content descriptions to views for accessibility
 - [ ] Understand how ti display items in a RecyclerView
 - [ ] Be able to bind local data to a RecyclerView list using the Paging library
-- [ ] Know how ti implement menu-based navigation
-- [ ] Understand how to implement drawer navigation
+- [X] Know how ti implement menu-based navigation
+- [X] Understand how to implement drawer navigation
 
 ## Data Management
 - [ ] Understand how to define data using Room entities
