@@ -7,19 +7,14 @@
 
     <fragment
         android:id="@+id/nav_today"
-        android:name="com.example.taskkata.ui.home.HomeFragment"
+        android:name="com.example.taskkata.ui.today.TodayFragment"
         android:label="@string/menu_today"
         tools:layout="@layout/fragment_today" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.taskkata.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:id="@+id/nav_completed"
+        android:name="com.example.taskkata.ui.completedtasks.CompletedTasksFragment"
+        android:label="@string/menu_completed"
         tools:layout="@layout/fragment_gallery" />
 
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.taskkata.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
 </navigation>

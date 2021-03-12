@@ -1,8 +1,8 @@
-package com.example.taskkata
+package com.example.taskkata.ui.login
 
-import androidx.lifecycle.Transformations.map
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.map
+import com.example.taskkata.FirebaseUserLiveData
 
 class LoginViewModel : ViewModel() {
 

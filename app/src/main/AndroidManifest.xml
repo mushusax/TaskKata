@@ -10,12 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TaskKata">
         <activity
-            android:name=".TodoActivity"
+            android:name=".ui.TodoActivity"
             android:label="@string/title_activity_todo"
             android:theme="@style/Theme.TaskKata.NoActionBar"></activity>
         <activity android:name=".MainActivity2" />
         <activity android:name=".SplashActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

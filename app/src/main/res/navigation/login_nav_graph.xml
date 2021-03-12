@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.taskkata.LoginFragment"
+        android:name="com.example.taskkata.ui.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.example.taskkata.SplashFragment"
+        android:name="com.example.taskkata.ui.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action

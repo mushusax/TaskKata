@@ -1,7 +1,8 @@
-package com.example.taskkata
+package com.example.taskkata.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.taskkata.R
 
 class MainActivity : AppCompatActivity() {
 

@@ -1,4 +1,4 @@
-package com.example.taskkata
+package com.example.taskkata.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,6 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.taskkata.R
+import com.example.taskkata.ui.SplashFragmentDirections
 import com.google.firebase.auth.FirebaseAuth
 
 class SplashFragment : Fragment() {

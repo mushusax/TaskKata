@@ -1,4 +1,4 @@
-package com.example.taskkata
+package com.example.taskkata.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,7 +7,6 @@ import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.TextView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.drawerlayout.widget.DrawerLayout
@@ -16,6 +15,8 @@ import androidx.appcompat.widget.Toolbar
 import androidx.navigation.NavController
 import androidx.navigation.ui.*
 import com.bumptech.glide.Glide
+import com.example.taskkata.R
+import com.example.taskkata.TodoItemListDialogFragment
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -48,7 +49,7 @@ class TodoActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_today, R.id.nav_gallery, R.id.nav_slideshow
+                    R.id.nav_today, R.id.nav_completed
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -89,13 +90,10 @@ class TodoActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 startActivity(intent)
                 return true
             }
-            R.id.nav_gallery -> {
+            R.id.nav_completed -> {
                 return item.onNavDestinationSelected(navController)
             }
             R.id.nav_today -> {
-                return item.onNavDestinationSelected(navController)
-            }
-            R.id.nav_slideshow -> {
                 return item.onNavDestinationSelected(navController)
             }
         }
