@@ -6,21 +6,21 @@ import androidx.room.*
 @Dao
 interface TaskDao {
 
-    @Insert
-    fun insertTask(task: Task)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertTask(task: Task)
 
     @Delete
-    fun deleteTask(task: Task)
+    suspend fun deleteTask(task: Task)
 
     @Update
-    fun updateTask(task: Task)
+    suspend fun updateTask(task: Task)
 
-    @Query("SELECT * FROM tasks ORDER BY taskId DESC LIMIT 1")
-    fun getRandomTask(): Task?
+    @Query("SELECT * FROM tasks WHERE :id = taskId")
+    suspend fun getTask(id: Int): Task?
 
     @Query("SELECT * FROM tasks ORDER BY taskId")
     fun getAllTasks(): LiveData<List<Task>>
 
     @Query("DELETE FROM tasks")
-    fun clear()
+    suspend fun clear()
 }

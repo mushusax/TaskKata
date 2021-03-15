@@ -16,7 +16,7 @@ import androidx.navigation.NavController
 import androidx.navigation.ui.*
 import com.bumptech.glide.Glide
 import com.example.taskkata.R
-import com.example.taskkata.TodoItemListDialogFragment
+import com.example.taskkata.ui.addtask.AddItemDialogFragment
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -36,7 +36,7 @@ class TodoActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         //Set up Bottom Sheet Modal to add new tasks
         val fab: FloatingActionButton = findViewById(R.id.fab)
         fab.setOnClickListener { view ->
-            TodoItemListDialogFragment.newInstance(0).show(supportFragmentManager, "dialog")
+            AddItemDialogFragment.newInstance(0).show(supportFragmentManager, "dialog")
         }
 
 

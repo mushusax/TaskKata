@@ -3,11 +3,12 @@ package com.example.taskkata.ui.login
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
+import com.example.taskkata.R
 import com.example.taskkata.databinding.FragmentLoginBinding
 import com.example.taskkata.ui.TodoActivity
 import com.firebase.ui.auth.AuthUI
@@ -26,8 +27,8 @@ class LoginFragment : Fragment() {
     private lateinit var auth: FirebaseAuth
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
@@ -62,17 +63,19 @@ class LoginFragment : Fragment() {
     private fun launchSignInFlow() {
         // Choose authentication providers
         val providers = arrayListOf(
-            AuthUI.IdpConfig.EmailBuilder().build(),
-            AuthUI.IdpConfig.GoogleBuilder().build()
+                AuthUI.IdpConfig.EmailBuilder().build(),
+                AuthUI.IdpConfig.GoogleBuilder().build()
         )
 
         // Create and launch sign-in intent
         startActivityForResult(
-            AuthUI.getInstance()
-                .createSignInIntentBuilder()
-                .setAvailableProviders(providers)
-                .build(),
-            SIGN_IN_REQUEST
+                AuthUI.getInstance()
+                        .createSignInIntentBuilder()
+                        .setAvailableProviders(providers)
+                        .setTheme(R.style.Theme_TaskKata)
+                        .setLogo(R.mipmap.ic_launcher)
+                        .build(),
+                SIGN_IN_REQUEST
         )
     }
 }

@@ -1,4 +1,4 @@
-package com.example.taskkata
+package com.example.taskkata.ui.addtask
 
 import android.app.DatePickerDialog
 import android.app.Dialog

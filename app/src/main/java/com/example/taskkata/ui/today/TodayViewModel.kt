@@ -1,13 +1,18 @@
 package com.example.taskkata.ui.today
 
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.taskkata.database.TaskDao
 
-class TodayViewModel : ViewModel() {
+class TodayViewModel(
+        dao: TaskDao,
+        application: Application
+) : AndroidViewModel(application) {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
-    }
-    val text: LiveData<String> = _text
+    //This is a LiveData of tasks from RoomDB
+    val tasks = dao.getAllTasks()
+
 }
