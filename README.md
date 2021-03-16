@@ -1,10 +1,10 @@
 # TaskKata
 Kata inspired todo list. Earn kata as you complete more tasks.
 
-![Alt text](Screenshot_1)
-![Alt text](Screenshot_1)
-![Alt text](Screenshot_1)
-![Alt text](Screenshot_1)
+![Alt text](/Screenshot_1.png?raw=true)
+![Alt text](Screenshot_2.png?raw=true)
+![Alt text](Screenshot_3.png?raw=true)
+![Alt text](Screenshot_4?raw=true)
 
 # What I Used
 - LiveData
