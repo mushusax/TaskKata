@@ -1,0 +1,16 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference
+        android:key="btn_reset"
+        android:summary="Delete all tasks in database"
+        android:title="@string/reset"
+        app:icon="@drawable/ic_baseline_delete_forever_24" />
+
+    <Preference
+        android:key="btn_delete_account"
+        android:summary="Delete account and all data"
+        android:title="@string/delete_account"
+        app:icon="@drawable/ic_baseline_no_accounts_24" />
+</PreferenceScreen>

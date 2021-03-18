@@ -1,4 +1,4 @@
-# TaskKata
+# <img src="https://your-image-url.type" width="100" height="100"> TaskKata
 Kata inspired todo list. Earn kata as you complete more tasks.
 
 <span>

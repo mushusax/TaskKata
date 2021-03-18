@@ -26,6 +26,7 @@ class TodoActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var auth: FirebaseAuth
     private lateinit var navController: NavController
+    private lateinit var drawerLayout: DrawerLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,10 +40,7 @@ class TodoActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             AddItemDialogFragment.newInstance(0).show(supportFragmentManager, "dialog")
         }
 
-
-
-
-        val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
+        drawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
         navController = findNavController(R.id.content_nav_host_fragment)
         // Passing each menu ID as a set of Ids because each
@@ -91,10 +89,13 @@ class TodoActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 return true
             }
             R.id.nav_completed -> {
-                return item.onNavDestinationSelected(navController)
+                return item.onNavDestinationSelected(navController).also { drawerLayout.close() }
             }
             R.id.nav_today -> {
-                return item.onNavDestinationSelected(navController)
+                return item.onNavDestinationSelected(navController).also { drawerLayout.close() }
+            }
+            R.id.nav_settings -> {
+                return item.onNavDestinationSelected(navController).also { drawerLayout.close() }
             }
         }
         return true
