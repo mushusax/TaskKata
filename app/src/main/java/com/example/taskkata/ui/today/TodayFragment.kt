@@ -48,7 +48,7 @@ class TodayFragment : Fragment() {
         viewModel.tasks.observe(viewLifecycleOwner, Observer {
             //When a change is made, update the data in adapter
             it?.let {
-                adapter.data = it
+                adapter.submitList(it)
             }
         })
 
