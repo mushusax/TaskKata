@@ -26,6 +26,7 @@ Kata inspired todo list. Earn kata as you complete more tasks.
 - MVVM
 - Adapter Pattern
 - Custom Theme
+- DiffUtil
 
 
 This project will serve as a way to prepare for the Android Certification.
