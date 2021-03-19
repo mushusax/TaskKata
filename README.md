@@ -2,18 +2,16 @@
 Kata inspired todo list. Earn kata as you complete more tasks.
 
 <span>
-  <img src="/Screenshot_1.png" width="360" height="760">
-  <img src="/Screenshot_2.png" width="360" height="760">
+  <img src="/Screenshot_1.png" width="180" height="380">
+  <img src="/Screenshot_2.png" width="180" height="380">
+  <img src="/Screenshot_3.png" width="180" height="380">
+  <img src="/Screenshot_4.png" width="180" height="380">
+  <img src="/settings.png" width="180" height="380">
+  <img src="/nav_drawer.png" width="180" height="380">
+  <img src="/completed_tasks_white.png" width="180" height="380">
 </span>
-<span>
-  <img src="/Screenshot_3.png" width="360" height="760">
- <img src="/Screenshot_4.png" width="360" height="760">
-</span>
-<span>
-  <img src="/settings.png" width="360" height="760">
- <img src="/nav_drawer.png" width="360" height="760">
-</span>
-<img src="/completed_tasks_white.png" width="360" height="760">
+
+
 
 
 # What I Used
