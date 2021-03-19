@@ -9,7 +9,11 @@ Kata inspired todo list. Earn kata as you complete more tasks.
   <img src="/Screenshot_3.png" width="360" height="760">
  <img src="/Screenshot_4.png" width="360" height="760">
 </span>
-
+<span>
+  <img src="/settings.png" width="360" height="760">
+ <img src="/nav_drawer.png" width="360" height="760">
+</span>
+<img src="/completed_tasks_white.png" width="360" height="760">
 
 
 # What I Used
@@ -25,6 +29,7 @@ Kata inspired todo list. Earn kata as you complete more tasks.
 - RecyclerView
 - MVVM
 - Adapter Pattern
+- Preferences
 - Custom Theme
 - DiffUtil
 
