@@ -21,6 +21,12 @@ interface TaskDao {
     @Query("SELECT * FROM tasks ORDER BY taskId")
     fun getAllTasks(): LiveData<List<Task>>
 
+    @Query("SELECT * FROM tasks WHERE is_completed = 1")
+    fun getCompletedTasks(): LiveData<List<Task>>
+
+    @Query("SELECT * FROM tasks WHERE is_completed = 0")
+    fun getIncompletedTasks(): LiveData<List<Task>>
+
     @Query("DELETE FROM tasks")
     suspend fun clear()
 }

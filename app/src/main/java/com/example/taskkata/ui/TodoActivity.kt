@@ -18,6 +18,7 @@ import com.bumptech.glide.Glide
 import com.example.taskkata.R
 import com.example.taskkata.ui.addtask.AddItemDialogFragment
 import com.firebase.ui.auth.AuthUI
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 
@@ -70,12 +71,6 @@ class TodoActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             val userImage = it.photoUrl
             Glide.with(this).load(userImage).circleCrop().into(imgProfile)
         }
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.todo, menu)
-        return true
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {

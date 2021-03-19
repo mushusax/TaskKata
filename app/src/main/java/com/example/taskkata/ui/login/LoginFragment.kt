@@ -16,11 +16,12 @@ import com.firebase.ui.auth.IdpResponse
 import com.google.firebase.auth.FirebaseAuth
 
 
+@Suppress("DEPRECATION")
 class LoginFragment : Fragment() {
 
     companion object {
         val TAG = "LoginFragment"
-        val SIGN_IN_REQUEST = 1001
+        const val SIGN_IN_REQUEST = 1001
     }
 
     private lateinit var binding: FragmentLoginBinding
@@ -29,7 +30,7 @@ class LoginFragment : Fragment() {
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
     }

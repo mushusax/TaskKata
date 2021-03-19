@@ -5,13 +5,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.taskkata.R
 import com.example.taskkata.database.TaskDao
 import com.example.taskkata.database.TaskDatabase
 import com.example.taskkata.databinding.FragmentTodayBinding
@@ -24,16 +20,14 @@ class TodayFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentTodayBinding.inflate(inflater)
 
         //Get references to Application, Database, and viewmodel
         val application: Application = requireNotNull(this.activity).application
         val dao: TaskDao = TaskDatabase.getInstance(application).taskDatabaseDao
-        val viewModelFactory: TodayViewModelFactory = TodayViewModelFactory(dao, application)
+        val viewModelFactory = TodayViewModelFactory(dao, application)
         val viewModel: TodayViewModel = ViewModelProvider(this, viewModelFactory).get(TodayViewModel::class.java)
-
-
 
         //Set lifecycle owner of binding to the activity
         binding.lifecycleOwner = this
@@ -41,17 +35,22 @@ class TodayFragment : Fragment() {
         //set up databinding
         binding.viewModel = viewModel
 
+
         //RecyclerView
-        val adapter = TodayAdapter()
+        val adapter = TodayAdapter(TaskListener( {
+            viewModel.onTaskClicked()
+        }, {
+            viewModel.onCheckBoxClicked(it)
+        }))
+
         binding.todayRecyclerView.adapter = adapter
         //Set observer
-        viewModel.tasks.observe(viewLifecycleOwner, Observer {
+        viewModel.tasks.observe(viewLifecycleOwner, {
             //When a change is made, update the data in adapter
             it?.let {
                 adapter.submitList(it)
             }
         })
-
 
         return binding.root
     }

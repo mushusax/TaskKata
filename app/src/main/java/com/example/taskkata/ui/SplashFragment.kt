@@ -1,6 +1,7 @@
 package com.example.taskkata.ui
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -11,6 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.taskkata.R
 import com.example.taskkata.ui.SplashFragmentDirections
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 
 class SplashFragment : Fragment() {
@@ -36,7 +38,8 @@ class SplashFragment : Fragment() {
         Handler(Looper.getMainLooper()).postDelayed({
             //If user is authenticated, navigate to TodoActivity
             if (auth.currentUser != null) {
-                val intent: Intent = Intent(requireContext(), TodoActivity::class.java)
+
+                val intent = Intent(requireContext(), TodoActivity::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 startActivity(intent)
