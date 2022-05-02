@@ -28,8 +28,8 @@ class LoginFragment : Fragment() {
     private lateinit var auth: FirebaseAuth
 
     override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View {
         binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
@@ -49,13 +49,18 @@ class LoginFragment : Fragment() {
             if (resultCode == Activity.RESULT_OK) {
                 // Successfully signed in
                 val user = FirebaseAuth.getInstance().currentUser
-                Toast.makeText(context, "Logged in as ${user?.displayName}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Logged in as ${user?.displayName}", Toast.LENGTH_SHORT)
+                    .show()
                 val intent = Intent(requireContext(), TodoActivity::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 startActivity(intent)
             } else {
-                Toast.makeText(context, "Sign in unsuccessful ${response?.error?.errorCode}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    context,
+                    "Sign in unsuccessful ${response?.error?.errorCode}",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
     }
@@ -64,19 +69,20 @@ class LoginFragment : Fragment() {
     private fun launchSignInFlow() {
         // Choose authentication providers
         val providers = arrayListOf(
-                AuthUI.IdpConfig.EmailBuilder().build(),
-                AuthUI.IdpConfig.GoogleBuilder().build()
+            AuthUI.IdpConfig.EmailBuilder().build(),
+            AuthUI.IdpConfig.GoogleBuilder().build()
         )
 
         // Create and launch sign-in intent
         startActivityForResult(
-                AuthUI.getInstance()
-                        .createSignInIntentBuilder()
-                        .setAvailableProviders(providers)
-                        .setTheme(R.style.Theme_TaskKata)
-                        .setLogo(R.mipmap.ic_launcher)
-                        .build(),
-                SIGN_IN_REQUEST
+            AuthUI.getInstance()
+                .createSignInIntentBuilder()
+                .setAvailableProviders(providers)
+                .setIsSmartLockEnabled(false)
+                .setTheme(R.style.Theme_TaskKata)
+                .setLogo(R.mipmap.ic_launcher)
+                .build(),
+            SIGN_IN_REQUEST
         )
     }
 }

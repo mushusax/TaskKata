@@ -7,17 +7,25 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:982694022757:android:c57685135be8f09109008c",
+        "mobilesdk_app_id": "1:982694022757:android:98d92a131f3b369609008c",
         "android_client_info": {
-          "package_name": "com.example.taskkata"
+          "package_name": "com.mushusax.taskkata"
         }
       },
       "oauth_client": [
         {
-          "client_id": "982694022757-9c1b2kkflmc8j6qgcd58qm5a2capjmp5.apps.googleusercontent.com",
+          "client_id": "982694022757-59eskn9vk1g80fvt1rhdphq5keijjs4g.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.taskkata",
+            "package_name": "com.mushusax.taskkata",
+            "certificate_hash": "8de8f179136839963ed9613f5bdf6b112205d259"
+          }
+        },
+        {
+          "client_id": "982694022757-oq34lu0on3rdlfnh67m990n7bh3n2ge5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mushusax.taskkata",
             "certificate_hash": "af7e92c3f62baf535fcdeb72ce7963f7659df9af"
           }
         },
